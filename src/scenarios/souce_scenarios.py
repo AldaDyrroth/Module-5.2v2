@@ -17,8 +17,29 @@ class PositiveScenarios:
         self.checkout = checkout
         self.login = login
 
-    def login_in_site(self, username, password):
+    def login_on_site(self, username, password, num: int = 1):
+        """
+        Сценарий: просто авторизация
+        """
+
         self.login.authorization(username, password)
+
+        # for i in range(num):
+        #     self.inventory.add_item_to_cart()
+        #
+        #
+        # self.login.authorization(username, password)
+
+    def add_goods_to_cart(self, num: int = 1):
+        """
+        Сценарий: сваливаем всю дешевку в свой контейнер для мусора
+        """
+
+        for i in range(num):
+            self.inventory.add_item_to_cart()
+
+
+
 
 
 

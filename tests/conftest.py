@@ -1,3 +1,5 @@
+from playwright.async_api import async_playwright
+import asyncio
 from playwright.sync_api import sync_playwright
 import time
 from faker import Faker
@@ -16,9 +18,11 @@ def browser():
     playwright.stop()
 
 @pytest.fixture(scope="session")
-def userdata():
-    return [
-        faker.first_name(),
-        faker.last_name(),
-        faker.postcode()
-    ]
+async def async_browser():
+    async with async_playwright() as a:
+        browser = await a.chromium.launch(headless=False, slow_mo=1000)
+        yield browser
+        time.sleep(3)
+        await browser.close()
+
+

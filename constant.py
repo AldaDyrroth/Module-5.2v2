@@ -2,8 +2,6 @@ from enum import Enum
 
 class Par(Enum):
     BASE_URL = "https://www.saucedemo.com"
-    USER_NAME = "standard_user"
-    USER_PASS = "secret_sauce"
     MIN_PRICE = '7.99'
     MAX_PRICE = '49.99'
     FIRST_TITLE = 'Test.allTheThings() T-Shirt (Red)'
@@ -16,6 +14,7 @@ class Selectors(Enum):
     CART_REMOVE_SELECTOR = ".cart_item >> text='Remove'"
     CART_RETURN_SELECTOR = ".cart_footer >> text='Continue Shopping'"
     CART_CHECKOUT_SELECTOR = "#checkout"
+    CART_ITEM_SELECTOR = ".cart_item"
 
     # CheckoutPage
     CHECKOUT_FIRSTNAME_SELECTOR = '#first-name'
@@ -32,6 +31,7 @@ class Selectors(Enum):
     INVENTORY_SORTING_SELECTOR = ".product_sort_container"
     INVENTORY_SORT_PARAM_PRICE_SELECTOR = ".product_sort_container >> text='Price (low to high)'"
     INVENTORY_SORT_PARAM_NAME_SELECTOR = ".product_sort_container >> text='Price (low to high)'"
+    INVENTORY_BURGER_MENU_SELECTOR = "#react-burger-menu-btn"
 
     # LoginPage
     LOGIN_USERNAME_SELECTOR = '#user-name'

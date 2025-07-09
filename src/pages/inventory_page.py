@@ -35,3 +35,7 @@ class InventoryPage(BasePage):
     def go_to_cart_page(self):
         self.wait_for_selector_click(Selectors.INVENTORY_RED_MARK_SELECTOR.value)
         self.assert_text_present_on_page(ExpectedData.CART_PAGE.value)
+
+    def logout(self):
+        self.wait_for_selector_click(Selectors.INVENTORY_SORTING_SELECTOR.value)
+        self.wait_for_selector_click(Selectors.INVENTORY_SORTING_SELECTOR.value)

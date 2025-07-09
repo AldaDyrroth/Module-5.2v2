@@ -61,3 +61,6 @@ class BasePage:
     def assert_input_value(self, selector, expected_value):
         expect(self.page.locator(selector)).to_have_value(expected_value)
 
+    def assert_count_of_elements(self, selector, count):
+        expect(self.page.locator(selector)).to_have_count(count)
+
