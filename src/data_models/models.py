@@ -12,3 +12,4 @@ class Generators:
             faker.last_name(),
             faker.postcode()
         ]
+

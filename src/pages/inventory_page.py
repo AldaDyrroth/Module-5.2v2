@@ -1,5 +1,5 @@
 from src.pages.base_page import BasePage
-from constant import Selectors, Endpoints, ExpectedData, Par
+from src.enums.web_metadata import Selectors, Endpoints, ExpectedData, Par
 
 class InventoryPage(BasePage):
     def __init__(self, page):

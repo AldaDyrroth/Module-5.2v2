@@ -1,12 +1,5 @@
 from enum import Enum
 
-class Par(Enum):
-    BASE_URL = "https://www.saucedemo.com"
-    MIN_PRICE = '7.99'
-    MAX_PRICE = '49.99'
-    FIRST_TITLE = 'Test.allTheThings() T-Shirt (Red)'
-    LAST_TITLE = 'Sauce Labs Backpack'
-
 
 class Selectors(Enum):
 
@@ -37,18 +30,3 @@ class Selectors(Enum):
     LOGIN_USERNAME_SELECTOR = '#user-name'
     LOGIN_PASSWORD_SELECTOR = '#password'
     LOGIN_LOGIN_BUTTTON_SELECTOR = '#login-button'
-
-
-class Endpoints(Enum):
-    CART = 'cart.html'
-    CHECKOUT = 'checkout-step-one.html'
-    INVENTORY = 'inventory.html'
-    LOGIN = ''
-
-class ExpectedData(Enum):
-    LOGIN_PAGE = 'Login'
-    INVENTORY_PAGE = 'Products'
-    CART_PAGE = 'Your Cart'
-    CHECKOUT_SECOND_PAGE = 'Checkout: Overview'
-    CHECKOUT_FIRST_PAGE = 'Checkout: Your Information'
-    COMPLETE_PAGE = 'Checkout: Complete!'
